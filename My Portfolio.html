@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/david/OneDrive/Desktop/My%20Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            background-color: #000000;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(164, 159, 138, 0.8);
+            color: #b8860b;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #444;
+            
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section Styles */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #b8860b;
+            
+            animation: move-bg 8s infinite ease-in-out;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://38.media.tumblr.com/f11689dd25383a684d98de53f51635ab/tumblr_nn4r7my6ut1txeruoo1_500.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+    
+
+    @keyframes move-bg {
+        0% { background-position: center top; }
+        50% { background-position: center center; }
+        100% { background-position: center bottom; }
+    }
+
+
+        .hero-content {
+            max-width: 600px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #b8860b;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #fff;
+        }
+
+        /* About Me Section Styles */
+        #about {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #5e6ef6, #333);
+            position: relative;
+        }
+        #about .dynamic-text {
+            font-size: 1.5rem;
+            color: #f8f8f8;
+            margin-top: 1rem;
+            font-weight: bold;
+            height: 2rem;
+            overflow: hidden;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #b8860b;
+            animation: blink 0.6s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Projects Section Styles */
+        #projects {
+            padding: 4rem 0;
+            background: #000;
+            text-align: center;
+            background-image: url('https://th.bing.com/th/id/OIP.Ap0PgDZUXu6-6CcJT0fbNQHaE8?rs=1&pid=ImgDetMain');
+            
+        }
+        .container{
+            color: #000;
+        }
+        .project-section-1 {
+            animation:forwards;
+            margin-bottom: 4rem;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            height: 400px;
+            width: 300px;
+            transform: translateY(0);
+            margin: 0 auto; 
+            position: relative; 
+            overflow: hidden;
+            
+            margin-top: 10px;
+            margin-right: 20px;
+            
+        }
+        /* Style for projects */
+        .project-section-1,
+        .project-section-2,
+        .project-section-3 {
+    width: 30%;  
+    display: inline-block;
+    
+    
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+        
+       }
+       @media (max-width: 768px) {
+    .project-section-1,
+    .project-section-2,
+    .project-section-3 {
+        width: 100%;  
+        display: block;  
+    }
+}
+
+
+
+
+
+        
+       
+    .project-section-1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .project-section-1 img:hover {
+        transform: scale(1.05);  
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .project-section-2 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        
+    }
+    .project-section-2 img:hover {
+        transform: scale(1.05);  
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-section-3 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+      
+    }
+    .project-section-3 img:hover {
+        transform: scale(1.05);  
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+</style>
+<style>
+        .project-section-2 {
+            margin-bottom: 2rem;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-image: url ('images/web-picture.jpg');
+            animation:forwards;
+            height: 400px;
+            width: 300px;
+            background-color: #f4f4f4;
+            margin: 0 auto; 
+            position: relative; 
+            overflow: hidden;
+            margin-top: 20px;
+            transform: translateY(30px);
+            margin-right: 20px;
+        }
+        .project-section-3 {
+            margin-bottom: 2rem;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-color: #f4f4f4;
+            animation:forwards;
+            height: 400px;
+            width: 300px;
+            background-color: #f4f4f4;
+            margin: 0 auto; 
+            position: relative; 
+            overflow: hidden;
+            margin-top: 40px;
+            transform: translateY(60px);
+        }
+        .project-section-1 h3 {
+            color: #b8860b;
+        }
+        .project-section-2 h3 {
+            color: #b8860b;
+        }
+        .project-section-3 h3 {
+            color: #b8860b;
+        }
+
+    
+        /* Contact Section Styles */
+        #contact {
+            background: linear-gradient(to bottom, #5e6ef6, #333);
+            padding: 4rem 0;
+            color: #ddd;
+            text-align: center;
+        }
+        #contactForm {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(252, 250, 250, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        #contactForm label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background: #442e2e;
+            color: #ddd;
+        }
+        #contactForm input:focus,
+        #contactForm textarea:focus {
+            outline: none;
+            border: 1px solid #b8860b;
+        }
+        #contactForm button {
+            background: #b8860b;
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #contactForm button:hover {
+            background: #fff;
+        }
+    
+         /*let me cook text*/
+         .let-me-cook{
+
+         color: rgb(98, 161, 98);
+         font-family: Arial, Helvetica, sans-serif;
+          font-size: 19px;
+        }
+
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes gradient-bg {
+            0% { background: radial-gradient(circle, #000, #1c1c1c, #333); }
+            50% { background: radial-gradient(circle, #1c1c1c, #333, #4d4d4d); }
+            100% { background: radial-gradient(circle, #000, #1c1c1c, #333); }
+        }
+    </style>
+
+<style>
+    /* Global Animated Background */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('https://th.bing.com/th/id/OIP.aWcupikvkZH5p8p8WrRtyAHaFN?rs=1&pid=ImgDetMain'), url('https://th.bing.com/th/id/R.0a22c95c4367c2009462c2b6cbf29a4f?rik=SjWQpZ3vmhlsCg&pid=ImgRaw&r=0');
+        background-size: cover;
+        background-position: center;
+        animation: move-bg 20s infinite alternate;
+        opacity: 0.8; /* Optional transparency */
+    }
+
+    @keyframes move-bg {
+        0% {
+            transform: scale(1) translateX(0);
+        }
+        50% {
+            transform: scale(1.1) translateX(10px);
+        }
+        100% {
+            transform: scale(1) translateX(-10px);
+        }
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1><a href="file:///C:/Users/david/OneDrive/Desktop/Portfolio0-2.html#">My Portfolio</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/david/OneDrive/Desktop/Portfolio0-2.html#about">About Me</a></li>
+                    <li><a href="file:///C:/Users/david/OneDrive/Desktop/Portfolio0-2.html#projects">Services</a></li>
+                    <li><a href="file:///C:/Users/david/OneDrive/Desktop/Portfolio0-2.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Design. Develop. Innovate.</h2>
+            <p>Crafting timeless digital experiences with elegance and precision.</p>
+            <a href="file:///C:/Users/david/OneDrive/Desktop/Portfolio0-2.html#projects" class="btn">Let's Go Explore My Services</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="fade-in visible">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I am David Oyebajo; I'm a passionate web designer and more...
+                <br>I do not like to speak much or brag of my skills as my reputations preceeds me .<br>
+                 Join forces with me;<br> <br><text class="let-me-cook"> Let us <del>work</del> <bold>COOK</bold> together.</text>
+                </p>
+            <div class="dynamic-text">
+                <span id="typedText">I'm an Acrylic Painter</span><span class="cursor">|</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in visible">
+        <div class="container">
+            <h2>Services I Offer</h2>
+            <div class="project-section-1">
+                <h3>Web Designing</h3>
+                <img class="fade-in-image" src="./My Portfolio_files/web-picture.jpg" alt="First service illustration" width="200" height="300">
+
+
+                <p>I offer Web development services .<br>Regardless of the style, complexity or design; <br> Once you can think it, i can cook it...</p>
+            </div>
+            <div class="project-section-2">
+                <h3>Cybersecurity Services</h3>
+                <img class="fade-in-image" src="./My Portfolio_files/cs-pic.png" alt="First service illustration" width="300" height="300">
+
+                <p>I, alongside my team offers Cybersecurity services.<br> What ever the case may be in terms of your business' network; <br>we're your safest bet to cybersecurity!</p>
+            </div>
+            <div class="project-section-3">
+                <h3>Paintings</h3>
+                <img class="fade-in-image" src="./My Portfolio_files/art.jpg" alt="First service illustration" width="300" height="300">
+
+                <p>I am engaged in the creation and sale of unique, handcrafted painting and as a result, <br>I produce and market high-quality, original artworks tailored to various tastes and preferences</p>
+            </div>
+        </div>
+    </section>
+    <style>
+        
+    
+    </style>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required="">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required="">
+
+                <label for="message"> Message: </label>
+                <textarea id="message" name="message" required=""></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 My Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Dynamic Typing Animation
+        const typedText = document.getElementById('typedText');
+        const phrases = [
+            "I'm a Web Developer",
+            "I'm a Multi-Instrumentalist",
+            "I'm an Acrylic Painter",
+            "I'm a Cybersecurity Analyst",
+            "I'm YOUR SAFEST BET"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let typingSpeed = 100;
+        let deletingSpeed = 50;
+        let delayBetweenPhrases = 2000;
+
+        function type() {
+            if (charIndex < phrases[phraseIndex].length) {
+                typedText.textContent += phrases[phraseIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, delayBetweenPhrases);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, deletingSpeed);
+            } else {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, typingSpeed);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(type, delayBetweenPhrases);
+        });
+
+        // Fade-in Animation Observer
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -100px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+        window.addEventListener('scroll', () => {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top <= windowHeight && rect.bottom >= 0) {
+            // Element is in view: add the "visible" class
+            el.classList.add('visible');
+        } else {
+            // Element is out of view: remove the "visible" class
+            el.classList.remove('visible');
+        }
+    });
+});
+
+    </script>
+
+
+</body></html>
